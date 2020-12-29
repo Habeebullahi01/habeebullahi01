@@ -1,11 +1,11 @@
-// @font-face {
-//     font-family: 'Work sans';
-//     src: (fonts/WorkSans-Italic-VariableFont_wght.ttf);
-// }
+@font-face {
+    font-family: 'Rosario';
+    src: url('fonts/Rosario-Light.woff');
+}
 html {
-    font-family: sans-serif;
+    font-family: 'Rosario', sans-serif;
     body {
-        margin: 0;
+        margin: 8px;
         background-color: black;
         color: white;
         overflow-x: hidden;
@@ -15,6 +15,7 @@ html {
         .top-nav {
             display: flex;
             flex-flow: row nowrap;
+            justify-content: space-around;
             position: sticky;
             position: -webkit-sticky;
             top: 0;
@@ -32,9 +33,9 @@ html {
                 nav {
                     display: flex;
                     height: 50%;
+                    width: fit-content;
+                    margin: auto;
                     flex-direction: column;
-                    align-content: center;
-                    // align-self: center;
                     justify-content: space-around;
                     a {
                         text-decoration: none;
@@ -44,18 +45,26 @@ html {
                         padding: 1em;
                         font-weight: bold;
                         font-size: 120%;
+                        transition: ease-in-out .5s;
+                    }
+                    a:hover {
+                        color: black;
                     }
                 }
             }
         }
         .btn-holder {
-            position: relative;
-            left: 1.5em;
+            position: static;
             margin-top: 2em;
             width: 90%;
             button {
+                box-sizing: border-box;
                 padding: 1em;
+                font-weight: 600;
+                font-size: 90%;
                 border: none;
+                transition: ease-in-out .5s;
+                width: 10em;
             }
             .btn-primary {
                 background-color: rgb(129, 124, 124);
@@ -66,14 +75,24 @@ html {
                 background-color: transparent;
                 color:  rgb(129, 124, 124);
             }
+            .btn-primary:hover {
+                background-color: rgb(63, 59, 59);
+                border: 1px solid rgb(129, 124, 124);
+            }
+            .btn-secondary:hover {
+                background-color:  rgba(70, 65, 65, 0.678);
+                color: black;
+            }
         }
         .center {
             width: fit-content;
-            margin: .5em auto;
+            margin: 1em auto;
         }
         #home {
             overflow-x: hidden;
-            margin-bottom: 3em;
+            margin: 0;
+            // margin-bottom: 3em;
+            height: 100vh;
             .home-text {
                 position: relative;
                 left: 1.5em;
@@ -89,6 +108,7 @@ html {
             }
         }
         #about {
+            margin-top: 0;
             .img-holder {
                 width: 70%;
                 img {
@@ -96,22 +116,24 @@ html {
                     border-radius: 100%;
                 }
             }
-            .skills {
-                .skill-holder {
-                    p {
-                        font-weight: bold;
-                    }
-                    .prog-div {
-                        width: 80%;
-                        height: .5em;
-                        .prog-full {
-                            width: 100%;
-                            height: inherit;
-                            background-color: grey;
-                            .prog-value {
+            .details {
+                .skills {
+                    .skill-holder {
+                        p {
+                            font-weight: bold;
+                        }
+                        .prog-div {
+                            width: 80%;
+                            height: .5em;
+                            .prog-full {
+                                width: 100%;
                                 height: inherit;
-                                background-color: brown;
-                                width: 80%;
+                                background-color: grey;
+                                .prog-value {
+                                    height: inherit;
+                                    background-color: brown;
+                                    width: 80%;
+                                }
                             }
                         }
                     }
@@ -148,24 +170,29 @@ html {
             }
         }
         #contact {
-            .form {
-                form {
-                    .f-group {
-                        input, textarea {
-                            display: block;
-                            margin: 1em auto;
-                            border: none;
-                            background-color: transparent;
-                            border-bottom: 1px rgb(192, 184, 184) solid;
-                            width: 98%;
+            .container-fluid {
+                .form {
+                    form {
+                        .f-group {
+                            input, textarea {
+                                display: block;
+                                margin: 1em auto;
+                                border: none;
+                                background-color: transparent;
+                                border-bottom: 1px rgb(192, 184, 184) solid;
+                                width: 98%;
+                            }
                         }
                     }
+                    [type='submit'] {
+                        width: 100%;
+                        padding: 1em;
+                        border: none;
+                        margin: auto;
+                    }
                 }
-                [type='submit'] {
-                    width: 100%;
-                    padding: 1em;
-                    border: none;
-                    margin: auto;
+                .vertical-rule {
+                    display: none;
                 }
             }
         }
@@ -187,6 +214,102 @@ html {
                 font-size: 70%;
                 span {
                     display: block;
+                }
+            }
+        }
+    }
+    @media screen and (min-width:'768px'){
+        body {
+            section {
+                margin: 7em auto;
+            }
+            .top-nav {
+                .nav-container {
+                    position: static;
+                    display: block;
+                    width: fit-content;
+                    height: fit-content;
+                    align-self: center;
+                    background-color: transparent;
+                    nav {
+                        display: initial;
+                        a {
+                            display: inline;
+                        }
+                    }
+                }
+            }
+            #home {
+                position: relative;
+                .home-text {
+                    // position: absolute;
+                    // left: 25%;
+                    // margin-right: 25%;
+                    left: 20%;
+                    top: 30%;
+                }
+            }
+            #about {
+                .details {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: space-around;
+                    p {
+                        width: 45%;
+                    }
+                    .skills {
+                        width: 50%;
+                    }
+                }
+            }
+            #works {
+                .proj-holder {
+                    .proj-img-holder {
+                        .btn-holder {
+                            display: block;
+                            text-align: right;
+                            button {
+                                width: 15%;
+                                max-width: 10em;
+                            }
+                        }
+                    }
+                }
+            }
+            #contact {
+                .container-fluid {
+                    width: 80%;
+                    margin: auto;
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: space-evenly;
+                    .vertical-rule {
+                        display: block;
+                        width: 0;
+                        height: 20em;
+                        border-right: 1px white solid;
+                    }
+                    .form {
+                        width: 65%;
+                    }
+                    .physical {
+                        width: 30%;
+                    }
+                }
+            }
+            footer {
+                .social {
+                    .s {
+                        width: fit-content;
+                        span {
+                            display: initial;
+                        }
+                    }
+                }
+                .legal {
+                    span {
+                        display: initial;
+                    }
                 }
             }
         }
