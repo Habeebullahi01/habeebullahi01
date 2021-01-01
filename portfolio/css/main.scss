@@ -2,8 +2,9 @@
     font-family: 'Rosario';
     src: url('fonts/Rosario-Light.woff');
 }
+*{
+    font-family: 'Rosario', sans-serif;}
 html {
-    font-family: 'Rosario', sans-serif;
     body {
         margin: 8px;
         background-color: black;
@@ -12,43 +13,45 @@ html {
         section {
             margin: 3em auto;
         }
-        .top-nav {
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-around;
+        .top-nav-container {
+            z-index: 5;
             position: sticky;
             position: -webkit-sticky;
             top: 0;
-            background-color: grey;
-            padding: .2em;
-            z-index: 5;
-            .nav-container {
-                // display: flex;
-                display: none;
-                position: absolute;
-                width: 100%;
-                height: 100vh;
-                background-color: rgb(63, 59, 59);
-                margin: 0;
-                nav {
-                    display: flex;
-                    height: 50%;
-                    width: fit-content;
-                    margin: auto;
-                    flex-direction: column;
-                    justify-content: space-around;
-                    a {
-                        text-decoration: none;
-                        color: white;
-                        display: block;
-                        text-align: center;
-                        padding: 1em;
-                        font-weight: bold;
-                        font-size: 120%;
-                        transition: ease-in-out .5s;
-                    }
-                    a:hover {
-                        color: black;
+            .top-nav {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-around;
+                background-color: grey;
+                padding: .2em;
+                .nav-container {
+                    // display: flex;
+                    display: none;
+                    position: absolute;
+                    width: 100%;
+                    height: 100vh;
+                    background-color: rgb(63, 59, 59);
+                    margin: 0;
+                    nav {
+                        display: flex;
+                        height: 50%;
+                        width: fit-content;
+                        margin: auto;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        a {
+                            text-decoration: none;
+                            color: white;
+                            display: block;
+                            text-align: center;
+                            padding: 1em;
+                            font-weight: bold;
+                            font-size: 120%;
+                            transition: ease-in-out .5s;
+                        }
+                        a:hover {
+                            color: black;
+                        }
                     }
                 }
             }
@@ -64,7 +67,7 @@ html {
                 font-size: 90%;
                 border: none;
                 transition: ease-in-out .5s;
-                width: 10em;
+                // width: 10em;
             }
             .btn-primary {
                 background-color: rgb(129, 124, 124);
@@ -96,6 +99,7 @@ html {
             .home-text {
                 position: relative;
                 left: 1.5em;
+                top: 20%;
                 h4 {
                     margin-bottom: 0;
                 }
@@ -162,6 +166,9 @@ html {
                         flex-direction: column;
                         align-content: space-between;
                         width: 100%;
+                        button {
+                            width: 100%;
+                        }
                         .btn-primary {
                             margin-bottom: .5em;
                         }
@@ -181,6 +188,7 @@ html {
                                 background-color: transparent;
                                 border-bottom: 1px rgb(192, 184, 184) solid;
                                 width: 98%;
+                                color: white;
                             }
                         }
                     }
@@ -223,18 +231,21 @@ html {
             section {
                 margin: 7em auto;
             }
-            .top-nav {
-                .nav-container {
-                    position: static;
-                    display: block;
-                    width: fit-content;
-                    height: fit-content;
-                    align-self: center;
-                    background-color: transparent;
-                    nav {
-                        display: initial;
-                        a {
-                            display: inline;
+            .top-nav-container {
+                position: relative;
+                .top-nav {
+                    .nav-container {
+                        position: static;
+                        display: block;
+                        width: fit-content;
+                        height: fit-content;
+                        align-self: center;
+                        background-color: transparent;
+                        nav {
+                            display: initial;
+                            a {
+                                display: inline;
+                            }
                         }
                     }
                 }
