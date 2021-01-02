@@ -2,9 +2,9 @@
     font-family: 'Rosario';
     src: url('fonts/Rosario-Light.woff');
 }
-*{
-    font-family: 'Rosario', sans-serif;}
+*{font-family: 'Rosario', sans-serif;}
 html {
+    scroll-behavior: smooth;
     body {
         margin: 8px;
         background-color: black;
@@ -14,7 +14,7 @@ html {
             margin: 3em auto;
         }
         .top-nav-container {
-            z-index: 5;
+            z-index: 2;
             position: sticky;
             position: -webkit-sticky;
             top: 0;
@@ -24,14 +24,43 @@ html {
                 justify-content: space-around;
                 background-color: grey;
                 padding: .2em;
+                #menuIcon {
+                    align-self: center;
+                    #menu {
+                        background-color: transparent;
+                        border: none;
+                        width: 3em;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
                 .nav-container {
-                    // display: flex;
-                    display: none;
+                    display: flex;
+                    flex-direction: column;
+                    overflow-x: hidden;
+                    // display: none;
                     position: absolute;
-                    width: 100%;
+                    width: 0;
                     height: 100vh;
+                    z-index: 3;
                     background-color: rgb(63, 59, 59);
                     margin: 0;
+                    transition:ease-in-out 1s ;
+                    #closeMenu {
+                        position: absolute;
+                        width: 3em;
+                        right: 45%;
+                        top: 4em;
+                        border: none;
+                        background-color: transparent;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    #closeMenu:active {
+                        border: 1px solid white;
+                    }
                     nav {
                         display: flex;
                         height: 50%;
@@ -154,6 +183,7 @@ html {
                 }
                 .cert-text {
                     width: 90%;
+                    max-width: 100em;
                 }
             }        
         }
@@ -234,7 +264,11 @@ html {
             .top-nav-container {
                 position: relative;
                 .top-nav {
+                    button {
+                        display: none;
+                    }
                     .nav-container {
+                        overflow-x: initial;
                         position: static;
                         display: block;
                         width: fit-content;
