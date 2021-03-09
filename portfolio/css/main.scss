@@ -5,11 +5,11 @@
 *{font-family: 'Rosario', sans-serif;}
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
     body {
         margin: 8px;
         background-color: black;
         color: white;
-        overflow-x: hidden;
         section {
             margin: 3em auto;
         }
@@ -143,7 +143,7 @@ html {
         #about {
             margin-top: 0;
             .img-holder {
-                width: 70%;
+                width: 60%;
                 img {
                     width: 100%;
                     border-radius: 100%;
@@ -235,6 +235,7 @@ html {
             }
         }
         footer {
+            // background-color: white;
             .social {
                 margin: 3em auto;
                 display: flex;
@@ -242,8 +243,19 @@ html {
                 justify-content: space-evenly;
                 .s {
                     width: 4em;
-                    span {
-                        display: none;
+                    a {
+                        text-decoration: none;
+                        color: inherit;
+                        span {
+                            display: none;
+                        }
+                        img {
+                            width: 1em;
+                            margin-bottom: 0;
+                        }
+                    }
+                    a:hover {
+                        cursor: pointer;
                     }
                 }
             }
@@ -295,6 +307,9 @@ html {
                 }
             }
             #about {
+                .img-holder {
+                    width: 20%;
+                }
                 .details {
                     display: flex;
                     flex-flow: row nowrap;
@@ -346,8 +361,10 @@ html {
                 .social {
                     .s {
                         width: fit-content;
-                        span {
-                            display: initial;
+                        a {
+                            span {
+                                display: initial;
+                            }
                         }
                     }
                 }
