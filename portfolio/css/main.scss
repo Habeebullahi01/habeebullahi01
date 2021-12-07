@@ -157,6 +157,11 @@ html {
       }
       .details {
         .skills {
+          ul {
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: repeat(4, 25%);
+          }
           .skill-holder {
             p {
               font-weight: bold;
@@ -183,6 +188,7 @@ html {
       .cert-holder {
         .cert-image {
           width: 80%;
+          margin: auto;
           img {
             width: 100%;
           }
@@ -190,6 +196,7 @@ html {
         .cert-text {
           width: 90%;
           max-width: 100em;
+          margin: auto;
         }
       }
     }

@@ -188,6 +188,12 @@ html body #about .img-holder img {
   border-radius: 100%;
 }
 
+html body #about .details .skills ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+}
+
 html body #about .details .skills .skill-holder p {
   font-weight: bold;
 }
@@ -211,6 +217,7 @@ html body #about .details .skills .skill-holder .prog-div .prog-full .prog-value
 
 html body #certificates .cert-holder .cert-image {
   width: 80%;
+  margin: auto;
 }
 
 html body #certificates .cert-holder .cert-image img {
@@ -220,6 +227,7 @@ html body #certificates .cert-holder .cert-image img {
 html body #certificates .cert-holder .cert-text {
   width: 90%;
   max-width: 100em;
+  margin: auto;
 }
 
 html body #works .proj-holder .proj-img-holder .btn-holder {
