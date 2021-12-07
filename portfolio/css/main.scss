@@ -1,379 +1,403 @@
 @font-face {
-    font-family: 'Rosario';
-    src: url('fonts/Rosario-Light.woff');
+  font-family: "Rosario";
+  src: url("fonts/Rosario-Light.woff");
 }
-*{font-family: 'Rosario', sans-serif;}
+* {
+  font-family: "Rosario", sans-serif;
+}
 html {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-    body {
-        margin: 8px;
-        background-color: black;
-        color: white;
-        section {
-            margin: 3em auto;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  body {
+    margin: 8px;
+    background-color: black;
+    color: white;
+    section {
+      margin: 3em auto;
+    }
+    .top-nav-container {
+      z-index: 2;
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0;
+      .top-nav {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        background-color: grey;
+        padding: 0.2em;
+        .banner a {
+          color: black;
+          text-decoration: none;
         }
-        .top-nav-container {
-            z-index: 2;
-            position: sticky;
-            position: -webkit-sticky;
-            top: 0;
-            .top-nav {
-                display: flex;
-                flex-flow: row nowrap;
-                justify-content: space-around;
-                background-color: grey;
-                padding: .2em;
-                #menuIcon {
-                    align-self: center;
-                    #menu {
-                        background-color: transparent;
-                        border: none;
-                        width: 3em;
-                        img {
-                            width: 100%;
-                        }
-                    }
-                }
-                .nav-container {
-                    display: flex;
-                    flex-direction: column;
-                    overflow-x: hidden;
-                    // display: none;
-                    position: absolute;
-                    width: 0;
-                    height: 100vh;
-                    z-index: 3;
-                    background-color: rgb(63, 59, 59);
-                    margin: 0;
-                    transition:ease-in-out 1s ;
-                    #closeMenu {
-                        position: absolute;
-                        width: 3em;
-                        right: 45%;
-                        top: 4em;
-                        border: none;
-                        background-color: transparent;
-                        img {
-                            width: 100%;
-                        }
-                    }
-                    #closeMenu:active {
-                        border: 1px solid white;
-                    }
-                    nav {
-                        display: flex;
-                        height: 50%;
-                        width: fit-content;
-                        margin: auto;
-                        flex-direction: column;
-                        justify-content: space-around;
-                        a {
-                            text-decoration: none;
-                            color: white;
-                            display: block;
-                            text-align: center;
-                            padding: 1em;
-                            font-weight: bold;
-                            font-size: 120%;
-                            transition: ease-in-out .5s;
-                        }
-                        a:hover {
-                            color: black;
-                        }
-                    }
-                }
+        #menuIcon {
+          align-self: center;
+          #menu {
+            background-color: transparent;
+            border: none;
+            width: 3em;
+            img {
+              width: 100%;
             }
+          }
         }
-        .btn-holder {
+        .nav-container {
+          display: flex;
+          flex-direction: column;
+          overflow-x: hidden;
+          // display: none;
+          position: absolute;
+          width: 0;
+          height: 100vh;
+          z-index: 3;
+          background-color: rgb(63, 59, 59);
+          margin: 0;
+          transition: ease-in-out 1s;
+          #closeMenu {
+            position: absolute;
+            width: 3em;
+            right: 45%;
+            top: 4em;
+            border: none;
+            background-color: transparent;
+            img {
+              width: 100%;
+            }
+          }
+          #closeMenu:active {
+            border: 1px solid white;
+          }
+          nav {
+            display: flex;
+            height: 50%;
+            width: fit-content;
+            margin: auto;
+            flex-direction: column;
+            justify-content: space-around;
+            a {
+              text-decoration: none;
+              color: white;
+              display: block;
+              text-align: center;
+              padding: 1em;
+              font-weight: bold;
+              font-size: 120%;
+              transition: ease-in-out 0.5s;
+            }
+            a:hover {
+              color: black;
+            }
+          }
+        }
+      }
+    }
+    .btn-holder {
+      position: static;
+      margin-top: 2em;
+      width: 90%;
+      button {
+        box-sizing: border-box;
+        padding: 1em;
+        font-weight: 600;
+        font-size: 90%;
+        border: none;
+        transition: ease-in-out 0.5s;
+        // width: 10em;
+      }
+      .btn-primary {
+        background-color: rgb(129, 124, 124);
+        color: black;
+      }
+      .btn-secondary {
+        border: 1px rgb(129, 124, 124) solid;
+        background-color: transparent;
+        color: rgb(129, 124, 124);
+      }
+      .btn-primary:hover {
+        background-color: rgb(63, 59, 59);
+        border: 1px solid rgb(129, 124, 124);
+      }
+      .btn-secondary:hover {
+        background-color: rgba(70, 65, 65, 0.678);
+        color: black;
+      }
+    }
+    .center {
+      width: fit-content;
+      margin: 1em auto;
+    }
+    #home {
+      overflow-x: hidden;
+      margin: 0;
+      // margin-bottom: 3em;
+      height: 100vh;
+      .home-text {
+        position: relative;
+        left: 1.5em;
+        top: 20%;
+        h4 {
+          margin-bottom: 0;
+        }
+        h2 {
+          margin: 0;
+        }
+        p {
+          font-weight: 200;
+        }
+      }
+    }
+    #about {
+      margin-top: 0;
+      .img-holder {
+        width: 60%;
+        img {
+          width: 100%;
+          border-radius: 100%;
+        }
+      }
+      .details {
+        .skills {
+          .skill-holder {
+            p {
+              font-weight: bold;
+            }
+            .prog-div {
+              width: 80%;
+              height: 0.5em;
+              .prog-full {
+                width: 100%;
+                height: inherit;
+                background-color: grey;
+                .prog-value {
+                  height: inherit;
+                  background-color: brown;
+                  width: 80%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    #certificates {
+      .cert-holder {
+        .cert-image {
+          width: 80%;
+          img {
+            width: 100%;
+          }
+        }
+        .cert-text {
+          width: 90%;
+          max-width: 100em;
+        }
+      }
+    }
+    #works {
+      .proj-holder {
+        .proj-img-holder {
+          .btn-holder {
             position: static;
-            margin-top: 2em;
-            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-content: space-between;
+            width: 100%;
             button {
-                box-sizing: border-box;
-                padding: 1em;
-                font-weight: 600;
-                font-size: 90%;
-                border: none;
-                transition: ease-in-out .5s;
-                // width: 10em;
+              width: 100%;
             }
             .btn-primary {
-                background-color: rgb(129, 124, 124);
-                color: black;
+              margin-bottom: 0.5em;
             }
-            .btn-secondary {
-                border: 1px rgb(129, 124, 124) solid;
+          }
+        }
+      }
+    }
+    #contact {
+      .container-fluid {
+        .form {
+          form {
+            .f-group {
+              input,
+              textarea {
+                display: block;
+                margin: 1em auto;
+                border: none;
                 background-color: transparent;
-                color:  rgb(129, 124, 124);
+                border-bottom: 1px rgb(192, 184, 184) solid;
+                width: 98%;
+                color: white;
+              }
             }
-            .btn-primary:hover {
-                background-color: rgb(63, 59, 59);
-                border: 1px solid rgb(129, 124, 124);
-            }
-            .btn-secondary:hover {
-                background-color:  rgba(70, 65, 65, 0.678);
-                color: black;
-            }
+          }
+          [type="submit"] {
+            width: 100%;
+            padding: 1em;
+            border: none;
+            margin: auto;
+            cursor: pointer;
+          }
+          [type="submit"]:hover {
+            background-color: grey;
+            color: white;
+          }
         }
-        .center {
+        .vertical-rule {
+          display: none;
+        }
+      }
+    }
+    footer {
+      // background-color: white;
+      .social {
+        margin: 3em auto;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        .s {
+          width: 4em;
+          a {
+            text-decoration: none;
+            color: inherit;
+            span {
+              display: none;
+            }
+            img {
+              width: 1em;
+              margin-bottom: 0;
+            }
+          }
+          a:hover {
+            cursor: pointer;
+          }
+        }
+      }
+      .legal {
+        text-align: center;
+        font-size: 70%;
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: "768px") {
+    body {
+      section {
+        margin: 7em auto;
+      }
+      .top-nav-container {
+        position: relative;
+        .top-nav {
+          button {
+            display: none;
+          }
+          .nav-container {
+            overflow-x: initial;
+            position: static;
+            display: block;
             width: fit-content;
-            margin: 1em auto;
-        }
-        #home {
-            overflow-x: hidden;
-            margin: 0;
-            // margin-bottom: 3em;
-            height: 100vh;
-            .home-text {
-                position: relative;
-                left: 1.5em;
-                top: 20%;
-                h4 {
-                    margin-bottom: 0;
-                }
-                h2 {
-                    margin: 0;
-                }
-                p {
-                    font-weight: 200;
-                }
+            height: fit-content;
+            align-self: center;
+            background-color: transparent;
+            nav {
+              display: initial;
+              a {
+                display: inline;
+              }
             }
+          }
         }
-        #about {
-            margin-top: 0;
-            .img-holder {
-                width: 60%;
-                img {
-                    width: 100%;
-                    border-radius: 100%;
-                }
-            }
-            .details {
-                .skills {
-                    .skill-holder {
-                        p {
-                            font-weight: bold;
-                        }
-                        .prog-div {
-                            width: 80%;
-                            height: .5em;
-                            .prog-full {
-                                width: 100%;
-                                height: inherit;
-                                background-color: grey;
-                                .prog-value {
-                                    height: inherit;
-                                    background-color: brown;
-                                    width: 80%;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+      }
+      #home {
+        position: relative;
+        .home-text {
+          // position: absolute;
+          // left: 25%;
+          // margin-right: 25%;
+          left: 20%;
+          top: 30%;
         }
-        #certificates {
-            .cert-holder {
-                .cert-image {
-                    width: 80%;
-                    img {
-                        width: 100%;
-                    }
-                }
-                .cert-text {
-                    width: 90%;
-                    max-width: 100em;
-                }
-            }        
+      }
+      #about {
+        .img-holder {
+          width: 20%;
         }
-        #works {
-            .proj-holder {
-                .proj-img-holder {
-                    .btn-holder {
-                        position: static;
-                        display: flex;
-                        flex-direction: column;
-                        align-content: space-between;
-                        width: 100%;
-                        button {
-                            width: 100%;
-                        }
-                        .btn-primary {
-                            margin-bottom: .5em;
-                        }
-                    }
-                }
-            }
+        .details {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-around;
+          p {
+            width: 45%;
+          }
+          .skills {
+            width: 50%;
+          }
         }
-        #contact {
-            .container-fluid {
-                .form {
-                    form {
-                        .f-group {
-                            input, textarea {
-                                display: block;
-                                margin: 1em auto;
-                                border: none;
-                                background-color: transparent;
-                                border-bottom: 1px rgb(192, 184, 184) solid;
-                                width: 98%;
-                                color: white;
-                            }
-                        }
-                    }
-                    [type='submit'] {
-                        width: 100%;
-                        padding: 1em;
-                        border: none;
-                        margin: auto;
-                    }
-                }
-                .vertical-rule {
-                    display: none;
-                }
-            }
+      }
+      #certificates {
+        .cert-holder {
+          .cert-image {
+            width: 50%;
+            margin: auto;
+          }
         }
-        footer {
-            // background-color: white;
-            .social {
-                margin: 3em auto;
-                display: flex;
-                flex-flow: row nowrap;
-                justify-content: space-evenly;
-                .s {
-                    width: 4em;
-                    a {
-                        text-decoration: none;
-                        color: inherit;
-                        span {
-                            display: none;
-                        }
-                        img {
-                            width: 1em;
-                            margin-bottom: 0;
-                        }
-                    }
-                    a:hover {
-                        cursor: pointer;
-                    }
-                }
+      }
+      #works {
+        .proj-holder {
+          .proj-img-holder {
+            .btn-holder {
+              display: block;
+              text-align: right;
+              button {
+                width: 15%;
+                max-width: 10em;
+              }
             }
-            .legal {
-                text-align: center;
-                font-size: 70%;
-                span {
-                    display: block;
-                }
-            }
+          }
         }
+      }
+      #contact {
+        .container-fluid {
+          width: 80%;
+          margin: auto;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-evenly;
+          .vertical-rule {
+            display: block;
+            width: 0;
+            height: 20em;
+            border-right: 1px white solid;
+          }
+          .form {
+            width: 65%;
+          }
+          .physical {
+            width: 30%;
+          }
+        }
+      }
+      footer {
+        .center {
+          color: white;
+          text-decoration: none;
+        }
+        .social {
+          .s {
+            width: fit-content;
+            a {
+              span {
+                display: initial;
+              }
+            }
+          }
+        }
+        .legal {
+          span {
+            display: initial;
+          }
+        }
+      }
     }
-    @media screen and (min-width:'768px'){
-        body {
-            section {
-                margin: 7em auto;
-            }
-            .top-nav-container {
-                position: relative;
-                .top-nav {
-                    button {
-                        display: none;
-                    }
-                    .nav-container {
-                        overflow-x: initial;
-                        position: static;
-                        display: block;
-                        width: fit-content;
-                        height: fit-content;
-                        align-self: center;
-                        background-color: transparent;
-                        nav {
-                            display: initial;
-                            a {
-                                display: inline;
-                            }
-                        }
-                    }
-                }
-            }
-            #home {
-                position: relative;
-                .home-text {
-                    // position: absolute;
-                    // left: 25%;
-                    // margin-right: 25%;
-                    left: 20%;
-                    top: 30%;
-                }
-            }
-            #about {
-                .img-holder {
-                    width: 20%;
-                }
-                .details {
-                    display: flex;
-                    flex-flow: row nowrap;
-                    justify-content: space-around;
-                    p {
-                        width: 45%;
-                    }
-                    .skills {
-                        width: 50%;
-                    }
-                }
-            }
-            #works {
-                .proj-holder {
-                    .proj-img-holder {
-                        .btn-holder {
-                            display: block;
-                            text-align: right;
-                            button {
-                                width: 15%;
-                                max-width: 10em;
-                            }
-                        }
-                    }
-                }
-            }
-            #contact {
-                .container-fluid {
-                    width: 80%;
-                    margin: auto;
-                    display: flex;
-                    flex-flow: row nowrap;
-                    justify-content: space-evenly;
-                    .vertical-rule {
-                        display: block;
-                        width: 0;
-                        height: 20em;
-                        border-right: 1px white solid;
-                    }
-                    .form {
-                        width: 65%;
-                    }
-                    .physical {
-                        width: 30%;
-                    }
-                }
-            }
-            footer {
-                .social {
-                    .s {
-                        width: fit-content;
-                        a {
-                            span {
-                                display: initial;
-                            }
-                        }
-                    }
-                }
-                .legal {
-                    span {
-                        display: initial;
-                    }
-                }
-            }
-        }
-    }
+  }
 }
