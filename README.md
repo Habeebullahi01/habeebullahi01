@@ -2,14 +2,13 @@
 
 ## I'm Habeebullahi
 
-I'm a Web Developer.
+I'm a Web (Backend) Developer.
 
 ### Projects
 
-I've worked on a few projects since the start of my learning. My first projects were from the course I took on [Udemy](www.udemy.com). I have also completed challenges from [FrontEndMentor.io](www.frontendmentor.io) and [Devchallenges.to](www.devchallenges.to).
+## Savoir Care
 
-- 🔭 I’m currently working on a web app, more details on that in the future.
-- 💬 Ask me about HTML, CSS, Javascript, SASS/SCSS.
+An online store that allows users to make orders and gives administrators easy access to tools and features that allow them manage the store efficiently.
 
 <!--
 **Habeebullahi01/habeebullahi01** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
