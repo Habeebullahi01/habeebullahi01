@@ -2,13 +2,10 @@
 
 ## I'm Habeebullahi
 
-I'm a Web (Backend) Developer.
-
-### Projects
-
-## Savoir Care
-
-An online store that allows users to make orders and gives administrators easy access to tools and features that allow them manage the store efficiently.
+Backend Developer, building APIs with Golang and Node.js.
+- 👯 I’m looking to collaborate on Golang projects, especially API related projects.
+- 📈 I'd also be glad to contribute to open source projects.
+- ⚒  I'm open to Backend Developer roles; intenship, full-time, part-time, all-the-time.
 
 <!--
 **Habeebullahi01/habeebullahi01** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
