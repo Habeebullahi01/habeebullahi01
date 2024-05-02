@@ -12,6 +12,10 @@ html {
     margin: 8px;
     background-color: black;
     color: white;
+    p {
+      line-height: 1.5em;
+      font-size: larger;
+    }
     section {
       margin: 3em auto;
     }
@@ -150,9 +154,10 @@ html {
       margin-top: 0;
       .img-holder {
         width: 60%;
+        // border-radius: 100%;
         img {
           width: 100%;
-          border-radius: 100%;
+          border-radius: 20%;
         }
       }
       .details {
@@ -203,18 +208,23 @@ html {
     #works {
       .proj-holder {
         .proj-img-holder {
-          .btn-holder {
-            position: static;
-            display: flex;
-            flex-direction: column;
-            align-content: space-between;
+          width: 100%;
+          text-align: center;
+          img {
             width: 100%;
-            button {
-              width: 100%;
-            }
-            .btn-primary {
-              margin-bottom: 0.5em;
-            }
+          }
+        }
+        .btn-holder {
+          position: static;
+          display: flex;
+          flex-direction: column;
+          align-content: space-between;
+          width: 100%;
+          button {
+            width: 100%;
+          }
+          .btn-primary {
+            margin-bottom: 0.5em;
           }
         }
       }
@@ -350,15 +360,20 @@ html {
         }
       }
       #works {
+        width: 70%;
         .proj-holder {
           .proj-img-holder {
-            .btn-holder {
-              display: block;
-              text-align: right;
-              button {
-                width: 15%;
-                max-width: 10em;
-              }
+            text-align: center;
+            img {
+              width: 50%;
+            }
+          }
+          .btn-holder {
+            display: block;
+            text-align: right;
+            button {
+              width: 15%;
+              max-width: 10em;
             }
           }
         }

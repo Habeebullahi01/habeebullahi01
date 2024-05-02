@@ -3,7 +3,8 @@
         {
             "format": "compressed",
             "extensionName": ".min.css",
-            "savePath": "/portfolio/css"
+            "savePath": "/portfolio/css",
+            "generateMap": false
         }
     ],
     "liveSassCompile.settings.autoprefix": []
