@@ -161,11 +161,19 @@ html {
         }
       }
       .details {
+        .bio {
+          text-align: justify;
+        }
         .skills {
           ul {
             list-style-type: none;
             display: grid;
             grid-template-columns: repeat(4, 25%);
+            // text-align: left;
+            padding: 0;
+            li {
+              font-size: larger;
+            }
           }
           .skill-holder {
             p {
@@ -213,6 +221,9 @@ html {
           img {
             width: 100%;
           }
+        }
+        p {
+          text-align: justify;
         }
         .btn-holder {
           position: static;
@@ -342,12 +353,18 @@ html {
         .details {
           display: flex;
           flex-flow: row nowrap;
-          justify-content: space-around;
-          p {
-            width: 45%;
+          justify-content: space-between;
+          // align-items: center;
+          margin: auto;
+          width: 75%;
+          .bio {
+            width: 50%;
+            p {
+              width: 100%;
+            }
           }
           .skills {
-            width: 50%;
+            width: 40%;
           }
         }
       }
@@ -360,7 +377,7 @@ html {
         }
       }
       #works {
-        width: 70%;
+        width: 75%;
         .proj-holder {
           .proj-img-holder {
             text-align: center;
