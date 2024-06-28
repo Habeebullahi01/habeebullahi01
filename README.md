@@ -5,6 +5,8 @@
 Software Engineer, solving problems with Golang and Node.js.
 
 [Portfolio](https://devlawal.vercel.app)
+
+Email: Lawalhabeebullahi008@gmail.com
 <!-- - 👯 I’m looking to collaborate on Golang projects, especially API related projects.
 - 📈 I'd also be glad to contribute to open source projects.
 - ⚒  I'm open to Backend Developer roles; intenship, full-time, part-time, all-the-time. -->
